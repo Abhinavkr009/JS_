@@ -36,3 +36,31 @@ const myFunction = function(){
 }
 
 console.log(typeof bigNumber)
+
+
+//*********************************************
+
+//Memory: Stack (Primitive), Heap (Non-Primitive)
+
+let myVelaName = "Abhinav Kumar";
+
+let anotherName = myVelaName
+anotherName = "Pragati"
+
+console.log(myVelaName);
+console.log(anotherName);
+// anotherName is Pragati just because this is stored in stack memory and in stack memory for primitive values, copy of variables are stored
+
+let userOne = {
+  email: "user@google.com",
+  upi: "user@ybl"
+}
+
+let userTwo = userOne;
+
+userTwo.email = "abhi@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
+//Now in the case of non-primitive data i.e heap memory, the reference is allocated so it is obvious that both the changed values are referring to the original email value in userOne.email. 
